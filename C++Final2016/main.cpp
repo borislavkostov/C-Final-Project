@@ -34,35 +34,35 @@ class Student
         {
             this->surname=surname;
         }
-        double setDiploma1(double diploma1)
+        double getDiploma1()
         {
             return this->diploma1;
         }
-        void getDiploma1()
+        void setDiploma1(double diploma1)
         {
             this->diploma1=diploma1;
         }
-        double setDiploma2(double diploma2)
+        double getDiploma2()
         {
             return this->diploma2;
         }
-        void getDiploma2()
+        void setDiploma2(double diploma2)
         {
             this->diploma2=diploma2;
         }
-        double setIzpit1(double izpit1)
+        double getIzpit1()
         {
             return this->izpit1;
         }
-        void getIzpit1()
+        void setIzpit1(double izpit1)
         {
             this->izpit1=izpit1;
         }
-        double setIzpit2(double izpit2)
+        double getIzpit2()
         {
             return this->izpit2;
         }
-        void getIzpit2()
+        void setIzpit2(double izpit2)
         {
             this->izpit1=izpit2;
         }
@@ -120,14 +120,17 @@ int main()
         cout<<"Bal = "<<bal<<endl;
 
     }
+    ofstream arrayData("Kandidatstudenti.txt");
     for(int i=0;i<5;i++)
     {
-        cout<<student[i].getName();
-        cout<<"\n";
-        cout<<student[i].getSurname();
-        cout<<"\n";
-        cout<<student[i].getNumber();
-        cout<<"\n";
+        arrayData<<"Name :"<<student[i].getName()<<"\n"<<endl;
+        arrayData<<"Surname :"<<student[i].getSurname()<<"\n"<<endl;
+        arrayData<<"Number :"<<student[i].getNumber()<<"\n"<<endl;
+        arrayData<<"First evaluation from diploma:"<<student[i].getDiploma1()<<"\n"<<endl;
+        arrayData<<"Second evaluation from diploma:"<<student[i].getDiploma2()<<"\n"<<endl;
+        arrayData<<"First evaluation from diploma:"<<student[i].getIzpit1()<<"\n"<<endl;
+        arrayData<<"Second evaluation from diploma:"<<student[i].getIzpit2()<<"\n"<<endl;
+
     }
 
     return 0;

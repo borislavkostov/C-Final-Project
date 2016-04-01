@@ -1,0 +1,40 @@
+Name :Borislav
+
+Surname :Kostov
+
+Number :312314
+
+First evaluation from diploma:6
+
+Name :Ivan
+
+Surname :Krastev
+
+Number :3134
+
+First evaluation from diploma:6
+
+Name :Pesho
+
+Surname :Todorov
+
+Number :3134
+
+First evaluation from diploma:3
+
+Name :Ivan
+
+Surname :Ivanov
+
+Number :124125
+
+First evaluation from diploma:5
+
+Name :Pito
+
+Surname :Kitov
+
+Number :534
+
+First evaluation from diploma:5
+
