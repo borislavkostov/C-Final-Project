@@ -102,7 +102,7 @@ int main()
     double izpit2;
     double bal;
     Student* student=new Student[5];
-    for(int i=0;i<3;i++)
+    for(int i=0;i<5;i++)
     {
         cout<<"\nEnter name:";
         cin>>name;
@@ -131,10 +131,10 @@ int main()
     }
        int i, j, flag = 1;
       Student temp;
-      for(i = 1; (i <= 3) && flag; i++)
+      for(i = 1; (i <= 5) && flag; i++)
      {
           flag = 0;
-          for (j=0; j < (3 -1); j++)
+          for (j=0; j < (5 -1); j++)
          {
                if (student[j+1].getBal() > student[j].getBal())
               {
@@ -146,7 +146,7 @@ int main()
           }
      }
     ofstream arrayData("Kandidatstudenti.txt");
-    for(int i=0;i<3;i++)
+    for(int i=0;i<5;i++)
     {
         arrayData<<"Name :"<<student[i].getName()<<"\n"<<endl;
         arrayData<<"Surname :"<<student[i].getSurname()<<"\n"<<endl;
