@@ -64,7 +64,7 @@ class Student
         }
         void setIzpit2(double izpit2)
         {
-            this->izpit1=izpit2;
+            this->izpit2=izpit2;
         }
         double getBal()
         {
@@ -130,7 +130,7 @@ int main()
 
     }
        int i, j, flag = 1;
-      int temp;
+      Student temp;
       for(i = 1; (i <= 3) && flag; i++)
      {
           flag = 0;
@@ -138,9 +138,9 @@ int main()
          {
                if (student[j+1].getBal() > student[j].getBal())
               {
-                    temp = student[j].getBal();
+                    temp = student[j];
                     student[j] = student[j+1];
-                    student[j+1].setBal(temp);
+                    student[j+1]=temp;
                     flag = 1;
                }
           }
