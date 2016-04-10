@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 using namespace std;
-
 class Player
 {
 public:
@@ -51,24 +50,27 @@ private:
 
 
 };
-int main()
+using namespace std;
+int SecondTournament()
 {
     int number;
     string surname;
     string country;
     double points;
     Player* player=new Player[2];
+    ifstream fin("Player.txt");
+    while (fin >> number >> surname >> country >> points)
+    {
+        int i=0;
+        i++;
+        player[i].setNumber(number);
+        player[i].setSurname(surname);
+        player[i].setCountry(country);
+        player[i].setPoints(points);
+
+    }
     for(int i=0;i<2;i++)
     {
-        cout<<"Enter number of player: \n";
-        cin>>number;
-        player[i].setNumber(number);
-        cout<<"Enter surname:\n";
-        cin>>surname;
-        player[i].setSurname(surname);
-        cout<<"Enter Country: \n";
-        cin>>country;
-        player[i].setCountry(country);
         cout<<"Enter points: \n";
         cin>>points;
         player[i].setPoints(points);
@@ -89,7 +91,7 @@ Player temp;
             }
         }
     }
-    ofstream arrayData("Players.txt");
+    ofstream arrayData("Results from second tournament.txt");
     for(int i=0;i<2;i++)
     {
         arrayData<<player[i].getNumber()<<" ";
@@ -97,5 +99,6 @@ Player temp;
         arrayData<<player[i].getCountry()<<" ";
         arrayData<<player[i].getPoints()<<"\n";
     }
-    return 0;
 }
+
+
