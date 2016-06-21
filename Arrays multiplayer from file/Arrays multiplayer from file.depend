@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1465894462 source:/home/templars1914/C-Final-Project/Arrays multiplayer from file/main.cpp
+	<iostream>
+	<vector>
+	<fstream>
+
